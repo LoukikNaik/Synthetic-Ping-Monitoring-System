@@ -1,0 +1,35 @@
+
+database:
+  host: localhost
+  port: 5432
+  username: admin
+  password: secret
+
+logging:
+  level: info
+  file: /var/log/app.log
+
+
+invalid_section:
+  name: My Application
+  version: 1.0
+
+  description: This line is missing a colon
+
+servers:
+  - name: server1
+    ip: 192.168.1.1
+  - name: server2
+    ip: 192.168.1.2
+  - name: list_item  
+
+
+features:
+  authentication:
+    enabled: true
+    methods:
+      - password
+      - oauth
+      - saml
+  authorization:
+    enabled: false
