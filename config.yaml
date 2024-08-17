@@ -1,0 +1,8 @@
+servers:
+  - address: "google.com"
+    probes: 4      # Number of ping probes
+  - address: "linkedin.com"
+    probes: 5
+  - address: "amazon.in"
+    probes: 3
+interval: 1
