@@ -1,8 +1,8 @@
 servers:
-  - address: "google.com"
-    probes: 4      # Number of ping probes
+  - address: "chatgpt.com"
+    probes: 8     # Number of ping probes
   - address: "linkedin.com"
-    probes: 5
-  - address: "amazon.in"
-    probes: 3
+    probes: 6
+  - address: "maps.ucsd.edu"
+    probes: 10
 interval: 1
