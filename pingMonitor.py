@@ -3,6 +3,7 @@ from parsePing import ping_server
 import json
 import time
 from prometheus_client import start_http_server, Gauge
+
 server = 'localhost:8000'
 ping_latency_min = Gauge('ping_latency_min', 'Minimum Round Trip Time', ['server'])
 ping_latency_avg = Gauge('ping_latency_avg', 'Average Round Trip Time', ['server'])
@@ -26,7 +27,9 @@ def display_metrics(server_name, metrics):
     ping_packets_transmitted.labels(server=server_name).set(metrics['packet_transmit'])
     ping_packets_received.labels(server=server_name).set(metrics['packet_receive'])
 
-config = read_yaml_file('config.yaml')
+config_name = input("Please Input Config File Path: ")
+
+config = read_yaml_file(config_name)
 # print(config.get('servers'))
 print(config)
 
